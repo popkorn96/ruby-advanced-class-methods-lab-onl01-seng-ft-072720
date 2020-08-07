@@ -39,7 +39,7 @@ class Song
     file = filename.split(" - ")
     song = file.collect do |file|
       data = file.split(" ,")
-      artist = [0]
+      artist_name = [0]
       song_name = [1]
       
       song = self.new
