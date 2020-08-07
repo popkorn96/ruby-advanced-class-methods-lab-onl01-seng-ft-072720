@@ -35,6 +35,12 @@ class Song
   def self.alphabetical
     @@all.sort_by{|song| song.name}
   end
+  def self.new_from_filename(filename)
+    file = filename.split("\n")
+    song = new_array.collect do |file|
+      data = file.split(" ,")
+      first_name = data[0]
+      last_name = 
   def save
     self.class.all << self
   end
